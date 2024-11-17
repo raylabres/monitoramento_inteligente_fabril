@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@600&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoramento de Câmeras</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> <!-- Importa o CSS -->
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script> <!-- Importa o JavaScript -->
+</head>
+<body>
+    <!-- Menu lateral -->
+    <div class="menu-lateral">
+        <h1>MONITORAMENTO<br>FABRIL<br><span>INTELIGENTE</span></h1>
+        <form action="{{ url_for('executar') }}" method="get">
+            <button type="submit">Executar</button>
+        </form>
+        <form action="{{ url_for('ultimas_ocorrencias') }}" method="get">
+            <button type="submit">Ocorrências</button>
+        </form>
+        <form action="{{ url_for('sistema_fechado') }}" method="get">
+            <button type="submit">Fechar</button>
+        </form>
+    </div>
+
+    <!-- Área de visualização das câmeras -->
+    <div class="visualizacao">
+        <div class="camera" id="camera1">
+            <div class="overlay">
+                <div class="red-dot"></div>
+                Câmera 1
+            </div>
+            <img src="http://10.118.128.232:8080/video" alt="Câmera 1" onerror="mostrarMensagemOffline(this)">
+            <div class="offline-message">Câmera fora do ar</div>
+        </div>
+        <div class="camera" id="camera2">
+            <div class="overlay">
+                <div class="red-dot"></div>
+                Câmera 2
+            </div>
+            <img src="http://10.118.128.51:8080/video" alt="Câmera 2" onerror="mostrarMensagemOffline(this)">
+            <div class="offline-message">Câmera fora do ar</div>
+        </div>
+        <div class="camera" id="camera3">
+            <div class="overlay">
+                <div class="red-dot"></div>
+                Câmera 3
+            </div>
+            <img src="http://10.118.130.1411212121:8080/video" alt="Câmera 3" onerror="mostrarMensagemOffline(this)">
+            <div class="offline-message">Câmera fora do ar</div>
+        </div>
+        <div class="camera" id="camera4">
+            <div class="overlay">
+                <div class="red-dot"></div>
+                Câmera 4
+            </div>
+            <img src="http://192.168.1.101:8080/erro_camera" alt="Câmera 4" onerror="mostrarMensagemOffline(this)">
+            <div class="offline-message">Câmera fora do ar</div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+/* Estilo da página de sistema fechado */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 98vh; /* 100% da altura da tela */
+    text-align: center;
+    background-color: #1b1b1b; /* Fundo que combina com o menu lateral */
+    color: #fafafa; /* Cor do texto */
+}
+
+h1 {
+    font-size: 3em; /* Tamanho da fonte do título */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    font-family: Arial, sans-serif; /* Fonte usada */
+}
+
+p {
+    font-size: 1.2em; /* Tamanho da fonte da mensagem */
+    max-width: 600px; /* Largura máxima do parágrafo */
+}
+
+button {
+    border: none;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    background-color: #767676;
+    border-radius: 12px;
+    padding: 10px 50px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.171);
+    cursor: pointer;
+    transition: background-color .3s ease;
+
+}
+
+button:hover {
+    background-color: #595959;
+}
