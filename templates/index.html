@@ -32,32 +32,52 @@
                 <div class="red-dot"></div>
                 Câmera 1
             </div>
-            <img src="http://10.118.128.232:8080/video" alt="Câmera 1" onerror="mostrarMensagemOffline(this)">
+            {% if ip1 %}
+            <img src="http://{{ ip1 }}:8080/video" alt="Câmera 1" onerror="mostrarMensagemOffline(this)">
+            {% else %}
+            <img src="" alt="Sem IP configurado" onerror="mostrarMensagemOffline(this)">
+            {% endif %}
             <div class="offline-message">Câmera fora do ar</div>
         </div>
+
         <div class="camera" id="camera2">
             <div class="overlay">
                 <div class="red-dot"></div>
                 Câmera 2
             </div>
-            <img src="http://10.118.128.51:8080/video" alt="Câmera 2" onerror="mostrarMensagemOffline(this)">
+            {% if ip2 %}
+            <img src="http://{{ ip2 }}:8080/video" alt="Câmera 2" onerror="mostrarMensagemOffline(this)">
+            {% else %}
+            <img src="" alt="Sem IP configurado" onerror="mostrarMensagemOffline(this)">
+            {% endif %}
             <div class="offline-message">Câmera fora do ar</div>
         </div>
+
         <div class="camera" id="camera3">
             <div class="overlay">
                 <div class="red-dot"></div>
                 Câmera 3
             </div>
-            <img src="http://10.118.130.1411212121:8080/video" alt="Câmera 3" onerror="mostrarMensagemOffline(this)">
+            {% if ip3 %}
+            <img src="http://{{ ip3 }}:8080/video" alt="Câmera 3" onerror="mostrarMensagemOffline(this)">
+            {% else %}
+            <img src="" alt="Sem IP configurado" onerror="mostrarMensagemOffline(this)">
+            {% endif %}
             <div class="offline-message">Câmera fora do ar</div>
         </div>
+
         <div class="camera" id="camera4">
             <div class="overlay">
                 <div class="red-dot"></div>
                 Câmera 4
             </div>
-            <img src="http://192.168.1.101:8080/erro_camera" alt="Câmera 4" onerror="mostrarMensagemOffline(this)">
+            {% if ip4 %}
+            <img src="http://{{ ip4 }}:8080/video" alt="Câmera 4" onerror="mostrarMensagemOffline(this)">
+            {% else %}
+            <img src="" alt="Sem IP configurado" onerror="mostrarMensagemOffline(this)">
+            {% endif %}
             <div class="offline-message">Câmera fora do ar</div>
         </div>
+    </div>
 </body>
 </html>
