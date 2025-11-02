@@ -20,7 +20,7 @@ Este projeto tem como objetivo **monitorar, em tempo real, o uso correto de Equi
 
 ---
 
-## 🧠 Tecnologias Utilizadas
+## 🧠 Tecnologias Utilizadas:
 
 - Python 3.10  
 - Flask  
